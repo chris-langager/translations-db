@@ -1,0 +1,55 @@
+{{define "layout"}}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="keywords"
+      content="translations, localizations, mutlilingual application, API, REST API"
+    />
+    <meta name="author" content="Chris Langager" />
+    <meta
+      name="description"
+      content="A simple and to the point classless CSS stylesheet"
+    />
+
+    <title>TranslationsDB</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/concrete.css@3.0.0/concrete.min.css"
+    /> 
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+    /> -->
+
+    <style>
+      h1 a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1><a href="/">TranslationsDB</a></h1>
+      </header>
+      {{ block "content" . }}{{ end }}
+
+    <footer>
+      <hr />
+    </footer>
+
+    <script
+      src="https://unpkg.com/htmx.org@1.9.11"
+      integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+{{ end }}

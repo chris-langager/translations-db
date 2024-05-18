@@ -1,0 +1,11 @@
+{{block "NewKeyForm" .}}
+<form hx-post="/keys">
+  <fieldset>
+    <legend>Create new key</legend>
+    <label for="id">Id</label>
+    <input type="text" name="id" />
+    <input type="hidden" name="project-id" value="{{ .Id}}" />
+    <input type="submit" value="Send" />
+  </fieldset>
+</form>
+{{end}}

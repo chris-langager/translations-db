@@ -1,0 +1,14 @@
+{{template "layout" .}} {{define "content"}}
+<main>
+  <section>{{template "NewProjectForm" .}}</section>
+  <section>
+    <h2>Projects</h2>
+    {{template "Projects" .ProjectsById}}
+  </section>
+
+  <section>
+    <h2>History</h2>
+    {{template "History" .History}}
+  </section>
+</main>
+{{ end }}

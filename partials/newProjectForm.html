@@ -1,0 +1,10 @@
+{{block "NewProjectForm" .}}
+<form hx-post="/projects">
+  <fieldset>
+    <legend>Create new project</legend>
+    <label for="name">Name</label>
+    <input type="text" name="name" />
+    <input type="submit" value="Send" />
+  </fieldset>
+</form>
+{{end}}

@@ -1,0 +1,9 @@
+{{block "History" .}}
+<div id="history" hx-swap-oob="true">
+  <code>
+    {{ range .}}
+    <pre>{{ . }}</pre>
+    {{ end }}
+  </code>
+</div>
+{{end}}

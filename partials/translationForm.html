@@ -1,0 +1,23 @@
+{{block "TranslationForm" .}}
+<form
+  id="translation-form-{{.KeyId}}-{{.Id}}"
+  hx-post="/translations"
+  hx-trigger="blur from:find .key-translation-value"
+  hx-swap="outerHTML"
+>
+  <!-- <input
+    class="key-translation-value"
+    type="text"
+    name="value"
+    value="{{ .Value }}"
+  /> -->
+
+  <textarea class="key-translation-value" cols="100" rows="4" name="value">
+{{ .Value }}</textarea
+  >
+
+  <input type="hidden" name="project-id" value="{{ .ProjectId }}" />
+  <input type="hidden" name="key-id" value="{{ .KeyId }}" />
+  <input type="hidden" name="id" value="{{ .Id }}" />
+</form>
+{{end}}

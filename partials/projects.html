@@ -1,0 +1,7 @@
+{{block "Projects" .}}
+<div id="projects" hx-swap-oob="true">
+  {{ range .}}
+  <div><a href="/project/{{.Id}}">{{ .Name }}</a></div>
+  {{ end }}
+</div>
+{{end}}
